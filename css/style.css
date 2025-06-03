@@ -34,14 +34,21 @@ body{
    font-family: "Hepta Slab", serif;
 }
 
+
+
+
+/* header generale */
 header nav{
     max-width: 1440px;
     margin: auto;
     display: flex;
     flex-direction: column;
+
     gap: 2rem;
     padding: 2rem 2rem;
-    margin-block: 4svh;
+    margin-top: 4svh;
+    margin-bottom: 10svh;
+
     border-top: 4px solid var(---Black);
     border-bottom: 2px solid var(---Black);
 }
@@ -83,11 +90,11 @@ a:hover{
 
 
 
-
+/* sezioni generali */
 section{
     max-width: 1440px;
     margin: auto;
-    padding: 3rem 1rem;
+    padding: 3rem 2rem;
     /* background-color: #1e1e1e; */
 }
 
@@ -104,8 +111,14 @@ section{
     max-width: 50%;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 2.5rem;
     padding-block: 2rem;
+}
+
+.text div{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
 }
 
 .text span, .text p{
@@ -114,6 +127,44 @@ section{
 
 h1::after{
     content: ":";
+}
+
+
+
+/* sezione card home */
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    gap: 2rem;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 250px;
+}
+
+.card_img img{
+    border: none;
+    /* object-fit: fill;
+    max-height: 200px; */
+}
+
+.card_text{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+
+    padding-top: .5rem;
+    padding-bottom: 1.5rem;
+    border-block: 2px solid var(---Black);
+}
+
+.card_text h1::after{
+    content: " ->";
 }
 
 
@@ -159,8 +210,21 @@ footer a{
 
 }
 
+
+@media (max-width: 806px){
+    .title{
+        font-size: 6rem;
+    }
+}
+
+
 @media (max-width: 550px) {
     
+    header nav{
+        margin-inline: 2svh;
+        margin-bottom: 4svh;
+    }
+
     .flex-row{
         flex-direction: column;
         gap: 2rem;
@@ -175,7 +239,20 @@ footer a{
     }
 
     .title{
-        font-size: 4rem;
+        font-size: 3rem;
+    }
+
+}
+
+
+@media (max-width: 362px) {
+
+    .title{
+        font-size: 2.5rem;
+    }
+
+    a{
+        font-size: .8rem;
     }
 
 }
